@@ -1,5 +1,4 @@
-{
-    "Sheet1": [
+
         {
             "Voornaam": "Ewa",
             "Achternaam": "van der Goot",
@@ -63,5 +62,3 @@
             "Telefoon": "0638807745",
             "Werkdagen": "Woe, Do, Za"
         }
-    ]
-}
