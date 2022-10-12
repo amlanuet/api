@@ -8,6 +8,6 @@ router.get('/posts/:id', controller.getPost);
 router.put('/posts/:id', controller.updatePost);
 router.delete('/posts/:id', controller.deletePost);
 router.post('/posts', controller.addPost);
-router.post('/data', controller.getData);
+router.get('/data', controller.getData);
 
 export = router;
