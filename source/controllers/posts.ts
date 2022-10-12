@@ -5,7 +5,7 @@ import axios, { AxiosResponse } from 'axios';
 import * as jsonData from "../../public/data.json";
 
 const data = (<any>jsonData).Sheet1;
-console.log(data); // output 'testing'
+const samples = (data as Post)
 
 interface Post {
    Voornaam: String,
@@ -21,10 +21,16 @@ const getByName = (req: Request, res: Response, next: NextFunction) => {
    // // get the post voornaam from the req
    let name: string = req.params.Voornaam;
    let result = data;
-   console.log(data.name)
-   let posts: Post = result;
+   console.log(name)
+   for (let index = 0; index < data.length; index++) {
+      const element = data[index];
+      if (element.Voornaam == name){
+         var results = data[index];
+      }
+   }
+   // let posts: Post = samples.Voornaam;
    return res.status(200).json({
-       message: posts
+       message: results
   });
 }
 
