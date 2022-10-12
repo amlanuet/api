@@ -17,11 +17,10 @@ interface Post {
    Werkdagen: String
 }
 
-
-const getData = (res: Response) => {
-    // get some posts
-    let result = (<any>jsonData).Sheet1;
-    return result;
+const getData = (req: Request, res: Response, next: NextFunction) => {
+   return res.status(200).json({
+       message: data
+  });
 };
 
 // getting all posts
