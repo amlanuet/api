@@ -9,5 +9,5 @@ router.put('/posts/:id', controller.updatePost);
 router.delete('/posts/:id', controller.deletePost);
 router.post('/posts', controller.addPost);
 router.get('/data', controller.getData);
-
+router.get('/name/:Voornaam', controller.getByName);
 export = router;
