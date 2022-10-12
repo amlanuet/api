@@ -17,6 +17,17 @@ interface Post {
    Werkdagen: String
 }
 
+const getByName = (req: Request, res: Response, next: NextFunction) => {
+   // // get the post voornaam from the req
+   let name: string = req.params.Voornaam;
+   let result = data;
+   console.log(data.name)
+   let posts: Post = result;
+   return res.status(200).json({
+       message: posts
+  });
+}
+
 const getData = (req: Request, res: Response, next: NextFunction) => {
    return res.status(200).json({
        message: data
@@ -91,4 +102,4 @@ const addPost = async (req: Request, res: Response, next: NextFunction) => {
     });
 };
 
-export default { getPosts, getPost, updatePost, deletePost, addPost, getData };
+export default { getPosts, getPost, updatePost, deletePost, addPost, getData, getByName };
